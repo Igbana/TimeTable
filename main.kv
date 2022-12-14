@@ -6,26 +6,28 @@
 			rectangle: [*self.pos, *self.size]
 
 <TableScreen>:
-	MDIconButton:
-		icon: 'chevron-left'
-		pos_hint: {'top': 0.99}
-		icon_size: '32sp'
 	MDBoxLayout:
-		padding: ('20dp', '20dp', '20dp', '20dp')
-		pos_hint: {'top': 0.95}
 		orientation: 'vertical'
-		spacing: dp(20)
-		size_hint_y: None
-		height: dp(150)
-		MDLabel:
-			markup: True
-			text: '[b][size=30sp]Today[/size][/b]\n[color=#999999]June 28th[/color]'
-		ScrollView:
-			#do_scroll_x: True
-			#do_scroll_y: False
-			MDBoxLayout
-				GridLayout:
+		MDIconButton:
+			icon: 'chevron-left'
+			pos_hint: {'top': 0.99}
+			icon_size: '32sp'
+		MDBoxLayout:
+			padding: ('20dp', '20dp', '20dp', '20dp')
+			pos_hint: {'top': 0.95}
+			orientation: 'vertical'
+			spacing: dp(20)
+			MDLabel:
+				markup: True
+				text: '[b][size=30sp]Today[/size][/b]\n[color=#999999]June 28th[/color]'
+				size_hint_y: None
+				height: self.texture_size[1]+dp(10)
+			ScrollView:
+				do_scroll_x: True
+				do_scroll_y: False
+				MDGridLayout:
+					size_hint_x: None
+					width: self.minimum_width
 					id: grid
-					rows: 2
-					row_default_height: dp(100)
+					cols: root.tmeVal+1
 					col_default_width: dp(150)

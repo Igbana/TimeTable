@@ -6,10 +6,13 @@ from kivymd.uix.card import MDCard
 from kivy.properties import NumericProperty, BooleanProperty
 from kivy.lang import Builder
 
+
 class Field(FloatLayout):
 	def add_widget(self, widget, *args, **kwargs):
 		widget.pos_hint = {'x':0, 'y':0}
 		super().add_widget(widget)
+		
+class TimeLabel(MDLabel)
 
 class Bar(MDCard):
 	allowance = NumericProperty(40)
@@ -42,9 +45,13 @@ class Bar(MDCard):
 	
 
 class TableScreen(MDScreen):
+	tmeVal = NumericProperty()
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
-		for i in range(10):
+		self.tmeLst = [f"{12 if i%12==0 else i%12}:00{'am' if i//12 == 0 else 'pm'}" for i in range(4, 23)]
+		self.days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+		self.tmeVal = len(self.tmeLst)
+		for i in range((len(self.days)+1)*(self.tmeVal+1)):
 			self.ids.grid.add_widget(Field())
 	
 class MainApp(MDApp):
