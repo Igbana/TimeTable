@@ -1,0 +1,43 @@
+[INFO   ] Logger: Record log in /storage/emulated/0/Documents/Timetable/.kivy/logs/kivy_22-12-13_81.txt
+[INFO   ] Kivy: v2.0.0
+[INFO   ] Kivy: Installed at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.9/site-packages/kivy/__init__.py"
+[INFO   ] Python: v3.9.7 (default, Oct  6 2021, 01:34:26) 
+[GCC 11.1.0]
+[INFO   ] Python: Interpreter at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/bin/python3"
+[INFO   ] KivyMD: 1.1.1, git-Unknown, 2022-11-23 (installed at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.9/site-packages/kivymd/__init__.py")
+[INFO   ] Factory: 186 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2, img_pil (img_ffpyplayer ignored)
+[INFO   ] Text: Provider: sdl2
+[INFO   ] Window: Provider: sdl2
+[INFO   ] GL: Using the "OpenGL ES 2" graphics system
+[INFO   ] GL: Backend used <sdl2>
+[INFO   ] GL: OpenGL version <b'OpenGL ES 3.2 v1.r26p0-01eac0.455662e55e7c7fb95a4b1db7e7af49a8'>
+[INFO   ] GL: OpenGL vendor <b'ARM'>
+[INFO   ] GL: OpenGL renderer <b'Mali-G52 MC2'>
+[INFO   ] GL: OpenGL parsed version: 3, 2
+[INFO   ] GL: Texture max size <16383>
+[INFO   ] GL: Texture max units <16>
+[INFO   ] Window: auto add sdl2 input provider
+[INFO   ] Window: virtual keyboard not allowed, single mode, not docked
+[WARNING] Lang: The file /storage/emulated/0/Documents/Timetable/main.kv is loaded multiples times, you might have unwanted behaviors.
+[WARNING] Factory: Ignored class "Box" re-declaration. Current -  module: None, cls: None, baseclass: FloatLayout, filename: /storage/emulated/0/Documents/Timetable/main.kv. Ignored -  module: None, cls: None, baseclass: FloatLayout, filename: /storage/emulated/0/Documents/Timetable/main.kv.
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/storage/emulated/0/Documents/Timetable/main.py", line 53, in <module>
+[WARNING] stderr:     MainApp().run()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.9/site-packages/kivy/app.py", line 949, in run
+[WARNING] stderr:     self._run_prepare()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.9/site-packages/kivy/app.py", line 919, in _run_prepare
+[WARNING] stderr:     root = self.build()
+[WARNING] stderr:   File "/storage/emulated/0/Documents/Timetable/main.py", line 51, in build
+[WARNING] stderr:     return TableScreen()
+[WARNING] stderr:   File "/storage/emulated/0/Documents/Timetable/main.py", line 47, in __init__
+[WARNING] stderr:     super().__init__(self, **kwargs)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.9/site-packages/kivymd/uix/behaviors/declarative_behavior.py", line 315, in __init__
+[WARNING] stderr:     self.add_widget(child)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.9/site-packages/kivy/uix/floatlayout.py", line 140, in add_widget
+[WARNING] stderr:     return super(FloatLayout, self).add_widget(widget, index, canvas)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.9/site-packages/kivy/uix/layout.py", line 97, in add_widget
+[WARNING] stderr:     return super(Layout, self).add_widget(widget, index, canvas)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.9/site-packages/kivy/uix/widget.py", line 613, in add_widget
+[WARNING] stderr:     raise WidgetException(
+[WARNING] stderr: kivy.uix.widget.WidgetException: Widget instances cannot be added to themselves.

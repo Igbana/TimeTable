@@ -1,0 +1,31 @@
+<Field>:
+	canvas.before:
+		Color:
+			rgba: 1,0,1,1
+		Line:
+			rectangle: [*self.pos, *self.size]
+
+<TableScreen>:
+	MDIconButton:
+		icon: 'chevron-left'
+		pos_hint: {'top': 0.99}
+		icon_size: '32sp'
+	MDBoxLayout:
+		padding: ('20dp', '20dp', '20dp', '20dp')
+		pos_hint: {'top': 0.95}
+		orientation: 'vertical'
+		spacing: dp(20)
+		size_hint_y: None
+		height: dp(150)
+		MDLabel:
+			markup: True
+			text: '[b][size=30sp]Today[/size][/b]\n[color=#999999]June 28th[/color]'
+		ScrollView:
+			#do_scroll_x: True
+			#do_scroll_y: False
+			MDBoxLayout
+				GridLayout:
+					id: grid
+					rows: 2
+					row_default_height: dp(100)
+					col_default_width: dp(150)
