@@ -3,6 +3,7 @@ from kivymd.app import MDApp
 from kivymd.uix.screen import MDScreen
 from kivy.uix.floatlayout import FloatLayout
 from kivymd.uix.card import MDCard
+from kivymd.uix.label import MDLabel
 from kivy.properties import NumericProperty, BooleanProperty
 from kivy.lang import Builder
 
@@ -12,7 +13,11 @@ class Field(FloatLayout):
 		widget.pos_hint = {'x':0, 'y':0}
 		super().add_widget(widget)
 		
-class TimeLabel(MDLabel)
+class TableLabel(MDLabel):
+	def __init__(self, *args, **kwargs):
+		super().__init__(*args, **kwargs)
+		self.halign = 'center'
+		self.bold = True
 
 class Bar(MDCard):
 	allowance = NumericProperty(40)
@@ -52,7 +57,12 @@ class TableScreen(MDScreen):
 		self.days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 		self.tmeVal = len(self.tmeLst)
 		for i in range((len(self.days)+1)*(self.tmeVal+1)):
-			self.ids.grid.add_widget(Field())
+			if i in range(1,self.tmeVal+1):
+				self.ids.grid.add_widget(TableLabel(text=self.tmeLst[i-1]))
+			elif (i%(self.tmeVal+1) == 0) and i != 0:
+				self.ids.grid.add_widget(TableLabel(text = self.days[(i//20)-1]))
+			else:
+				self.ids.grid.add_widget(Field())
 	
 class MainApp(MDApp):
 	def build(self):

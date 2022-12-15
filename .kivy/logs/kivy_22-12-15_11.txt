@@ -1,4 +1,4 @@
-[INFO   ] Logger: Record log in /storage/emulated/0/Documents/Timetable/.kivy/logs/kivy_22-12-13_61.txt
+[INFO   ] Logger: Record log in /storage/emulated/0/Documents/Timetable/.kivy/logs/kivy_22-12-15_11.txt
 [INFO   ] Kivy: v2.0.0
 [INFO   ] Kivy: Installed at "/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.9/site-packages/kivy/__init__.py"
 [INFO   ] Python: v3.9.7 (default, Oct  6 2021, 01:34:26) 
@@ -19,7 +19,6 @@
 [INFO   ] GL: Texture max units <16>
 [INFO   ] Window: auto add sdl2 input provider
 [INFO   ] Window: virtual keyboard not allowed, single mode, not docked
-[WARNING] Lang: The file /storage/emulated/0/Documents/Timetable/main.kv is loaded multiples times, you might have unwanted behaviors.
 [WARNING] Base: Unknown <android> provider
 [INFO   ] Base: Start application main loop
 [INFO   ] GL: NPOT texture support is available
